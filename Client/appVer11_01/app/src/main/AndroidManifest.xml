@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="sharkfeel.homeautomation">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+
+    <!-- 인터넷권한 설정 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <!-- 위치권한 설정 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <!-- 안드로이드 23버전부터는 아래권한 추가로 설정해야함 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/icon1"
+        android:label="HN System"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <!-- 위에 HN System은 앱 아이콘 이름 -->
+        <!-- 스플래시 액티비티 -->
+        <!-- 맨 처음 시작화면 (2초간 띄워줌) -->
+        <activity
+            android:name=".SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".MainActivity" />
+        <activity android:name=".DBInsertActivity" />
+
+        <service
+            android:name=".ServerService"
+            android:enabled="true"
+            android:exported="true" />
+    </application>
+</manifest>

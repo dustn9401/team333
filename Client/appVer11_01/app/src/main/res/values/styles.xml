@@ -1,0 +1,50 @@
+<resources>
+
+    <!--탭 글씨체, 모양등-->
+    <style name="MyTabLayoutTextAppearance" parent="TextAppearance.AppCompat.Widget.ActionBar.Title.Inverse">
+        <item name="android:textSize">14dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">sans-serif-condensed</item>
+        <!--<item name="android:typeface">monospace</item>-->
+    </style>
+
+    <!--앱바(액션바) 선택,해제시 글씨크기-->
+    <style name="expandedappbar" parent="TextAppearance.Widget.AppCompat.Toolbar.Title"> //Change Medium to Small
+        <item name="android:textSize">0sp</item>  <!--Or Change the font size -->
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="collapsedappbar" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">18dp</item>
+    </style>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <!--colorPrimary : 타이틀바 ( 앱 이름 나오는 바) activity_main 에서 수정할것 -->
+        <item name="colorPrimary">#FFFFFF</item>
+        <!--colorPrimaryDark : 상태바 (최상단 시간 LTE보이는곳)-->
+        <item name="colorPrimaryDark">#A1CDE1</item>
+        <!--탭 이동시 탭제목아래 ㅡ <-모양 움직이는 바 색깔-->
+        <item name="colorAccent">#1DDB16</item>
+        <!--맨아래 뒤로가기, 홈, 메뉴바 색깔 변경-->
+        <item name="android:navigationBarColor">#A1CDE1</item>
+        <!--왼쪽상단 네비게이션바 (drawer)아이콘 색깔 흰색으로 변경-->
+        <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
+        <!--오른쪽상단 overflow메뉴 (점3개) 색깔 흰색으로 변경-->
+        <item name="actionOverflowButtonStyle">@style/MyOverflowButtonStyle</item>
+    </style>
+
+    <style name="SplashTheme" parent="@android:style/Theme.Light.NoTitleBar">
+        <item name="android:windowBackground">@drawable/start_image4</item>
+    </style>
+
+    <style name="DrawerArrowStyle" parent="Widget.AppCompat.DrawerArrowToggle">
+        <item name="color">@android:color/white</item>
+    </style>
+
+    <style name="MyOverflowButtonStyle" parent="Widget.AppCompat.ActionButton.Overflow">
+        <item name="android:tint">#FFFFFF</item>
+    </style>
+
+</resources>

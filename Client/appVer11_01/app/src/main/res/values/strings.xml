@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">HNSystem</string>
+
+    <string name="label_uri">URI</string>
+    <string name="label_button">GET</string>
+
+    <string name="action_sandbox">californium.eclipse.org</string>
+    <string name="action_local">localhost</string>
+
+    <string name="action_start">Run Local Server</string>
+
+
+    <string name="uri_sandbox">coap://californium.eclipse.org:5683/</string>
+    <string name="uri_local">coap://localhost:5683/</string>
+
+    <string name="server1_ipv6">coaps://[2005::ba27:ebff:fec2:6083]:5684/</string>
+    <string name="server2_ipv6">coaps://[2005::ba27:ebff:fe61:d8ef]:5684/</string>
+    <string name="server3_ipv6">coaps://[2005::ba27:ebff:fe5c:b7a0]:5684/</string>
+
+    <!--Bedroom-->
+    <string name="sensor1_ipv6">coap://[aaaa::212:4b00:c65:8001]</string>
+    <!--Bathroom-->
+    <string name="sensor2_ipv6">coap://[aaaa::212:4b00:c66:1382]</string>
+    <!--Kitchen-->
+    <string name="sensor3_ipv6">coap://[aaaa::212:4b00:c66:ea04]</string>
+    <!--Living-->
+    <string name="sensor4_ipv6">coap://[aaaa::212:4b00:c66:2281]</string>
+    <!--Yard-->
+    <string name="sensor5_ipv6">coap://[aaaa::212:4b00:c67:9b05]</string>
+
+    <string name="sensor_tempURL">sen/tmp/amb</string>
+    <string name="sensor_humURL">sen/hdc/h</string>
+    <string name="sensor_atmURL">sen/bar/pres</string>
+    <string name="sensor_luxURL">sen/opt/light</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+</resources>

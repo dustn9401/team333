@@ -1,0 +1,63 @@
+#include <SoftwareSerial.h>
+#include <Stepper.h>
+
+
+const int stepsPerRevolution = 2048;
+int motion = 2;
+int light = 12;
+int servoPin = 4;
+int buzzer = 6;
+int angle = 0;
+
+Stepper myStepper(stepsPerRevolution, 11, 9, 10, 8);
+SoftwareSerial xbee(1, 2);
+
+
+#define RLOAD 10.0
+#define RZERO 76.63
+#define PARA 116.6020682
+#define PARB 2.769034857
+
+void setup() {
+	pinMode(motion, INPUT);
+	pinMode(buzzer, OUTPUT);
+	pinMode(light, OUTPUT);
+	myStepper.setSpeed(14);
+	xbee.begin(9600);
+}
+
+void loop() {
+
+	digitalWrite(light, LOW);
+	digitalWrite(buzzer, HIGH);
+
+
+	int sensor = digitalRead(motion);
+
+	if (sensor == HIGH) {
+		digitalWrite(light, HIGH);
+		digitalWrite(buzzer, LOW);
+		myStepper.step(stepsPerRevolution);
+		delay(2500);
+
+		myStepper.step(-stepsPerRevolution);
+		delay(500);
+	}
+
+	if (xbee.available())
+	{
+		switch (xbee.read())
+		{
+		case 'R':
+			myStepper.step(stepsPerRevolution);
+			delay(500);                      // waits 15ms for the servo to reach the position
+			}
+			break;
+
+		case 'T':
+			myStepper.step(-stepsPerRevolution);
+			delay(500);
+			break;
+		}
+	}
+}

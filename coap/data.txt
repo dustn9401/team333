@@ -1,9 +1,0 @@
-Characteristic value/descriptor: 01 
-Characteristic value/descriptor: 01 
-Characteristic value/descriptor: 01 
-Characteristic value/descriptor: 01 
-Characteristic value/descriptor: 01 
-Characteristic value/descriptor: 01 
-Characteristic value/descriptor: 01 
-Characteristic value/descriptor: 01 
-Characteristic value/descriptor: 01 

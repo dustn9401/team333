@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/KitchenLinear"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/KitchenRltLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/textKitchenHum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#90ffffff"
+            android:gravity="center"
+            android:visibility="gone"
+            android:text="부엌"
+            android:textSize="30dp" />
+
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/KitchenList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></ListView>
+</LinearLayout>
